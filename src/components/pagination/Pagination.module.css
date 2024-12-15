@@ -1,0 +1,53 @@
+.PageList{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  /* border: 1.5px solid #dadfe7; */
+  width: fit-content;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.Page{
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-right: 1.5px solid #dadfe7; */
+    padding: 5px 10px;
+    height: 32px;
+    width: 32px;
+    font-size: 14px;
+    color: #102126;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+li:last-child .Page{ border: none;}
+
+.Active{
+    background-color:#102126 ;
+    color: #d4d8d9;
+}
+
+button.Page:not([disabled]):hover.Active{
+    background-color:#102126;
+    color: #d4d8d9;
+}
+
+button.Page:not([disabled]):hover{
+    background-color:#f1f7f9;
+    color: #4c636b;
+    border: 1px solid #102126
+}
+.Placeholder{
+    cursor: default;
+    opacity: .5;
+}
+
+
+.Disable{
+  opacity: .5;
+  cursor: default;
+}
