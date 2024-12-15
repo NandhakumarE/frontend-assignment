@@ -6,11 +6,11 @@ import { ITableLoader } from "./TableLoader.type";
 const TableLoader: React.FC<ITableLoader> = ({ rows = 5, columns = 3 }) => {
   return (
     <div className={styles.TableLoader}>
-      <table>
+      <table className={styles.Table}>
         <thead>
           <tr>
             {Array.from({ length: columns }).map((_, index) => (
-              <th key={index}>
+              <th key={index} className={styles.TableHead}>
                 <div className={cx(styles.Skeleton, styles.SkeletonHeader)} />
               </th>
             ))}
@@ -20,7 +20,7 @@ const TableLoader: React.FC<ITableLoader> = ({ rows = 5, columns = 3 }) => {
           {Array.from({ length: rows }).map((_, rowIndex) => (
             <tr key={rowIndex}>
               {Array.from({ length: columns }).map((_, colIndex) => (
-                <td key={colIndex}>
+                <td key={colIndex} className={styles.TableData}>
                   <div className={cx(styles.Skeleton, styles.SkeletonCell)} />
                 </td>
               ))}

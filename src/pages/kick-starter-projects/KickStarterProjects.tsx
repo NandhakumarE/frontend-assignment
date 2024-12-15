@@ -40,13 +40,9 @@ const KickStarterProjects = () => {
     return rowData;
   };
 
-  if (isLoading) {
-    return <TableLoader />;
-  }
-
-  return (
-    <div className={styles.Container}>
-      <h1 className={styles.Title}>Kick Starter Project</h1>
+  const getTable = () => {
+    if (isLoading) return <TableLoader />;
+    return (
       <TableWithPagination
         id="kickstarter-table"
         headers={getHeaders()}
@@ -58,6 +54,13 @@ const KickStarterProjects = () => {
           onPageSelect: setPage,
         }}
       />
+    );
+  };
+
+  return (
+    <div className={styles.Container}>
+      <h1 className={styles.Title}>Kick Starter Project</h1>
+      {getTable()}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { ITable, TableHeader, TableRow, ColumnAlignment } from "./Table.type";
 import { EMPTY_STRING, EMPTY_MESSAGE } from "../../utils/constants";
-import "./Table.module.css";
+import styles from "./Table.module.css";
 
 const DEFUALT_ALIGNMENT: ColumnAlignment = "left";
 
@@ -27,6 +27,7 @@ const Table: React.FC<ITable> = (props) => {
         key={eachHeader.id}
         align={eachHeader.alignment || DEFUALT_ALIGNMENT}
         scope="col"
+        className={styles.TableHead}
       >
         {eachHeader.label}
       </th>
@@ -45,7 +46,12 @@ const Table: React.FC<ITable> = (props) => {
       return (
         <tbody>
           <tr>
-            <td scope="row" align="center" colSpan={10}>
+            <td
+              scope="row"
+              align="center"
+              colSpan={10}
+              className={styles.TableData}
+            >
               {message}
             </td>
           </tr>
@@ -62,6 +68,7 @@ const Table: React.FC<ITable> = (props) => {
                 key={`${row.id}-${index}`}
                 scope="row"
                 align={eachCell.alignment || DEFUALT_ALIGNMENT}
+                className={styles.TableData}
               >
                 {eachCell.content}
               </td>
@@ -75,7 +82,7 @@ const Table: React.FC<ITable> = (props) => {
   };
 
   return (
-    <table id={id}>
+    <table id={id} className={styles.Table}>
       {getHeaders(headers)}
       {getBody(rows)}
     </table>

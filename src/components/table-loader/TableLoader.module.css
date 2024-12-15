@@ -3,19 +3,23 @@
     border-collapse: collapse;
   }
   
-  .TableLoader table {
+  .Table {
     width: 100%;
     border-spacing: 0;
   }
   
-  .TableLoader th{
-    padding: 8px;
+  .TableHead{
+    padding: 10px 15px;
     text-align: left;
+    background-color: #f1f7f9;
+    border-bottom: 1.5px solid #dadfe7;
   }
 
-  .TableLoader td {
-    padding: 18px;
+  .TableData {
+    padding: 18px 15px;
     text-align: left;
+    border-bottom: 1.5px solid #dadfe7;
+    background-color: white;
   }
   
   .Skeleton {
