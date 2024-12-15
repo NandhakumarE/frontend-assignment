@@ -2,7 +2,7 @@ table{
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 0;
-    border: 1.5px solid #dadfe7;
+    /* border: 1.5px solid #dadfe7; */
 }
 
 th{
@@ -20,9 +20,5 @@ td{
     color: #555758;
     font-size: 14px;
     font-weight: 400;
-    padding: 10px 15px;
-}
-
-tr:last-child td{
-    border-bottom: none;
+    padding: 18px 15px;
 }
