@@ -1,7 +1,13 @@
 import "./App.css";
 
+import KickStarterProjects from "./pages/kick-starter-projects/KickStarterProjects";
+
 function App() {
-  return <div> Table With Pagination</div>;
+  return (
+    <div>
+      <KickStarterProjects />
+    </div>
+  );
 }
 
 export default App;

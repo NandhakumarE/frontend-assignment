@@ -23,10 +23,7 @@ const TableWithPagination: React.FC<ITableWithPagination> = (props) => {
       />
       <div className={styles.PaginationContainer}>
         <span className={styles.Message}>
-          {getShowingMessage?.(
-            paginationOptions.totalCount,
-            paginationOptions.page
-          )}
+          {getShowingMessage?.(paginationOptions.page)}
         </span>
         <Pagination {...paginationOptions} />
       </div>

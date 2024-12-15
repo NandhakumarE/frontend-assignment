@@ -1,0 +1,49 @@
+.TableLoader {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .TableLoader table {
+    width: 100%;
+    border-spacing: 0;
+  }
+  
+  .TableLoader th{
+    padding: 8px;
+    text-align: left;
+  }
+
+  .TableLoader td {
+    padding: 18px;
+    text-align: left;
+  }
+  
+  .Skeleton {
+    display: inline-block;
+    height: 16px;
+    width: 100%;
+    background: linear-gradient(90deg, #e0e0e0 25%, #f8f8f8 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    border-radius: 4px;
+    animation: skeleton-loading 1.5s infinite ease-in-out;
+  }
+  
+  .SkeletonHeader {
+    height: 20px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .SkeletonCell {
+    height: 16px;
+  }
+  
+  @keyframes skeleton-loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
